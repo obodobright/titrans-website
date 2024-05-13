@@ -1,15 +1,15 @@
 import "@/styles/globals.css";
-import { Syne } from "next/font/google";
+import { Lato } from "next/font/google";
 
-const syne = Syne({
+const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   variable: "--font-lato",
 });
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${syne.className} font-lato`}>
+    <main className={`${lato.className} font-lato`}>
       <Component {...pageProps} />
     </main>
   );
