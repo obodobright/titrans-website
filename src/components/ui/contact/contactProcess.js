@@ -10,7 +10,7 @@ export const ContactSectionProcess = () => {
       <CustomSectiomWrapper>
         <div className="flex items-center gap-12">
           <div className="max-w-md">
-            <TagBadge cls="bg-[#FFCC4A]">PROCESS</TagBadge>
+            <TagBadge cls="bg-[#FFCC4A] text-white">PROCESS</TagBadge>
             <TextH3>Contact Us. It’s Easy.</TextH3>
             <p className="font-normal text-[#595566] my-1 text-lg ">
               Leverage agile frameworks to provide a robust synopsis for high level overviews.

@@ -10,7 +10,7 @@ export const Aboutus = () => {
       <section className="mt-12">
         <main className=" gap-5 py-12 px- flex items-center">
           <div className="lg:max-w-[420px] px-3">
-            <TagBadge cls="bg-[#E58F24]">About Us</TagBadge>
+            <TagBadge cls="bg-[#E58F24] uppercase text-black">About Us</TagBadge>
             <TextH3>Providing Cutting Edge Tech Solutions.</TextH3>
             <p className="font-bold my-1 text-lg ">
               Visionary minds revolutionizing the digital sphere through training, consultancy, and

@@ -9,7 +9,7 @@ export const ValueSection = () => {
       <CustomSectiomWrapper>
         <div className="flex items-end justify-between">
           <div>
-            <TagBadge cls="bg-[#4EAF4E] uppercase">Growing with our Clients</TagBadge>
+            <TagBadge cls="bg-[#4EAF4E] text-white uppercase">Growing with our Clients</TagBadge>
             <h2 className="text-4xl text-left text-[#181818] font-bold">
               Our core values & principles
             </h2>

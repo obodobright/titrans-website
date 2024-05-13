@@ -9,7 +9,7 @@ export const Call2Action = () => {
       <CustomSectiomWrapper>
         <div className="w-full bg-black rounded-[30px] flex items-center justify-between ">
           <div className="px-12  max-w-md">
-            <TagBadge cls={"bg-[#4EAF4E]"}>Book Now</TagBadge>
+            <TagBadge cls={"bg-[#4EAF4E] text-black"}>Book Now</TagBadge>
             <h3 className="text-white font-semibold text-5xl">
               Better Consult, <span className="text-[#727272]">Better</span> Results
             </h3>

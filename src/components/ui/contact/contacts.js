@@ -15,7 +15,7 @@ export const ContactSection = () => {
             <img src="/asset/about.png" alt="learning-img" className="w-[700px]" />
           </div>
           <div className="lg:max-w-[420px] px-3">
-            <TagBadge cls="bg-[#4EAF4E]">Let’s talk</TagBadge>
+            <TagBadge cls="bg-[#4EAF4E] text-white">Let’s talk</TagBadge>
             <TextH3>Get In Touch With Us</TextH3>
             <p className="font-normal text-[#595566] my-1 text-lg ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

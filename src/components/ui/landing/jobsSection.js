@@ -16,7 +16,7 @@ export const JobSection = () => {
         <div className="text-white relative -top-[300px] ">
           <div className="flex items-end justify-between">
             <div>
-              <TagBadge cls="bg-[#4EAF4E]">HOT JOBS</TagBadge>
+              <TagBadge cls="text-black bg-[#4EAF4E]">HOT JOBS</TagBadge>
               <h3 className="font-bold text-[40px] text-white max-w- max-w-lg">
                 Recent job openings and IT opportunities in the UK.
               </h3>

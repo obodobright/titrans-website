@@ -8,7 +8,7 @@ export const AboutHero = () => {
     <HeroLayout bg="hero-about.png">
       <CustomSectiomWrapper>
         <HeroMirror>
-          <TagBadge cls="bg-[#FFCC4A]">ABOUT US</TagBadge>
+          <TagBadge cls="bg-[#FFCC4A] text-black">ABOUT US</TagBadge>
           <TextH2>Providing Cutting Edge Tech Solutions.</TextH2>
         </HeroMirror>
       </CustomSectiomWrapper>

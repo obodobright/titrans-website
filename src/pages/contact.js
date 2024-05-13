@@ -13,7 +13,7 @@ export default function Contact() {
       <HeroLayout bg="contact-hero.png">
         <CustomSectiomWrapper>
           <HeroMirror>
-            <TagBadge cls="bg-[#FFCC4A] uppercase">Contact us</TagBadge>
+            <TagBadge cls="bg-[#FFCC4A] text-black">Contact us</TagBadge>
             <TextH2>Feel Free To Reach Us.</TextH2>
           </HeroMirror>
         </CustomSectiomWrapper>

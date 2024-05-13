@@ -10,7 +10,7 @@ export const ProcessSection = () => {
       <CustomSectiomWrapper>
         <main className="flex gap-12 items-start justify-between">
           <div className="w-full max-w-sm ">
-            <TagBadge cls="bg-[#4EAF4E]">PROCESS</TagBadge>
+            <TagBadge cls="bg-[#4EAF4E] text-black">PROCESS</TagBadge>
             <div>
               <h3 className="font-bold text-3xl">Our learning model</h3>
               <p className="my-3 text-base font-normal text-[#595566]">
@@ -41,7 +41,7 @@ export const ProcessSection = () => {
             </div>
           </div>
           <div className="w-full ">
-            <TagBadge cls="bg-[#E58F24]">BECOME AN IT INTERN</TagBadge>
+            <TagBadge cls="bg-[#E58F24] text-white">BECOME AN IT INTERN</TagBadge>
             <div>
               <h3 className="font-bold text-3xl">
                 Join our 6 months internship to launch your tech career

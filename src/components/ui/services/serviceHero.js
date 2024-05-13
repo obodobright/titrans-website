@@ -8,7 +8,7 @@ export const ServiceHero = () => {
     <HeroLayout bg="service-hero.png">
       <CustomSectiomWrapper>
         <HeroMirror>
-          <TagBadge cls="bg-[#FFCC4A]">SERVICES</TagBadge>
+          <TagBadge cls="bg-[#FFCC4A] text-black">SERVICES</TagBadge>
           <TextH2>Creative Services For exceptional Business Growth</TextH2>
         </HeroMirror>
       </CustomSectiomWrapper>

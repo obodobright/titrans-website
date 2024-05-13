@@ -10,7 +10,7 @@ export const VisionSection = () => {
       <section className="mt-12">
         <main className=" gap-5 py-12 px- flex items-center">
           <div className=" px-3">
-            <TagBadge cls="bg-[#4EAF4E]">Our Vision</TagBadge>
+            <TagBadge cls="bg-[#4EAF4E] uppercase text-white">Our Vision</TagBadge>
             <TextH3>Turn your ideas into reality.</TextH3>
 
             <p className="my-2 text-[#595566] font-normal text-base ">

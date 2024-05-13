@@ -8,7 +8,7 @@ export const ServiceSection = () => {
     <main className="w-full py-12 px-9 bg-[#F8C648]">
       <CustomSectiomWrapper>
         <div className="flex items-center justify-center flex-col">
-          <TagBadge cls="bg-[#4EAF4E]">SERVICES</TagBadge>
+          <TagBadge cls="bg-[#4EAF4E] text-white">SERVICES</TagBadge>
           <h2 className="text-4xl text-center text-[#181818] font-bold">
             Our core revolves around human and technological development, and the delivery of
             exceptional services.
