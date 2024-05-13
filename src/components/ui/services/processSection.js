@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { TagBadge } from "@/components/Tag";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { TextH3 } from "../landing/component/TextH2";
@@ -11,7 +12,7 @@ export const ProcessSection = () => {
             <img src="/asset/process-img.png" alt="learning-img" className="w-[700px]" />
           </div>
           <div className="lg:max-w-[420px] px-3">
-            <TagBadge cls="bg-[#E58F24]">Process</TagBadge>
+            <TagBadge cls="bg-[#E58F24] uppercase">Process</TagBadge>
             <TextH3>Our Creative Services & Development</TextH3>
             <div className="mt-4">
               <div className="flex items-start gap-3 my-2">
