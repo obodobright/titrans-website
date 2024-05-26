@@ -8,7 +8,7 @@ export const ContactSectionProcess = () => {
   return (
     <div className="w-full p-10">
       <CustomSectiomWrapper>
-        <div className="flex items-center gap-12">
+        <div className="md:flex  items-center gap-12">
           <div className="max-w-md">
             <TagBadge cls="bg-[#FFCC4A] text-white">PROCESS</TagBadge>
             <TextH3>Contact Us. It’s Easy.</TextH3>

@@ -10,7 +10,7 @@ export const ContactSection = () => {
   return (
     <CustomSectiomWrapper>
       <section className="mt-12">
-        <main className=" gap-9 py-12 px- flex items-center">
+        <main className=" gap-9 py-12 md:px-1 flex flex-wrap md:flex-nowrap flex-col  md:flex-row items-center">
           <div>
             <img src="/asset/about.png" alt="learning-img" className="w-[700px]" />
           </div>

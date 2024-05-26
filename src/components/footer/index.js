@@ -1,15 +1,5 @@
 import { CustomSectiomWrapper } from "../customWrapper";
-import {
-  BrandLogo,
-  FBIConDark,
-  FBIcon,
-  IGICon,
-  IGIConDark,
-  LinkInIConDark,
-  LinkedInICon,
-  XIConDark,
-  XIcon,
-} from "../icons";
+import { BrandLogo, FBIConDark, IGIConDark, LinkInIConDark, XIConDark } from "../icons";
 
 export const Footer = () => {
   return (
@@ -24,18 +14,18 @@ export const Footer = () => {
     >
       <CustomSectiomWrapper>
         <div className="w-full pt-14">
-          <div className="flex flex-col gap-1 items-center justify-center">
+          <div className="flex flex-col gap-1 text-center items-center justify-center">
             <h3 className="text-xl font-bold leading-6">Get in touch</h3>
-            <h2 className="text-3xl text-[#7C7C7C] font-bold leading-8">
+            <h2 className="text-2xl md:text-3xl text-[#7C7C7C] font-bold leading-8">
               +44 7761 425 493 | info@titranstech.co.uk
             </h2>
           </div>
           {/* <div className="w-full h-[1px] bg-[#E0E0E0]"></div> */}
-          <div className="flex mt-10 pt-4 border-t border-[#E0E0E0] items-start justify-between">
+          <div className="block lg:flex mt-10 pt-4 border-t px-5 border-[#E0E0E0] items-start justify-between">
             <div className="relative -m">
               <BrandLogo size={150} />
             </div>
-            <div className="flex gap-12 items-start">
+            <div className="block lg:flex gap-12 items-start">
               <ul>
                 <LiTitle>Pages</LiTitle>
                 <Li>Home</Li>

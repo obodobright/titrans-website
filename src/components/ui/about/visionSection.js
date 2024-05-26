@@ -7,8 +7,8 @@ import { CheckMark } from "@/components/icons";
 export const VisionSection = () => {
   return (
     <CustomSectiomWrapper>
-      <section className="mt-12">
-        <main className=" gap-5 py-12 px- flex items-center">
+      <section className="md:mt-12">
+        <main className=" gap-5 py-12 px-3 md:px-1 flex flex-wrap md:flex-nowrap flex-col-reverse  md:flex-row  items-center">
           <div className=" px-3">
             <TagBadge cls="bg-[#4EAF4E] uppercase text-white">Our Vision</TagBadge>
             <TextH3>Turn your ideas into reality.</TextH3>
@@ -40,11 +40,11 @@ export const VisionSection = () => {
             <img src="/asset/vision-img.png" alt="learning-img" className="w-[700px]" />
           </div>
         </main>
-        <div className="flex pb-10 gap-8 items-center justify-center">
+        <div className="flex flex-wrap pb-10 gap-8 items-center justify-center">
           {numPer.map((num, index) => (
             <div className="mx-3 flex items-center justify-center flex-col" key={index}>
-              <h2 className="text-5xl font-bold leading-[51px]">{num.number} </h2>
-              <p className="text-lg font-medium">{num.description}</p>
+              <h2 className="text-3xl  md:text-5xl font-bold leading-[51px]">{num.number} </h2>
+              <p className="text-sm text-center md:text-lg font-medium">{num.description}</p>
             </div>
           ))}
         </div>

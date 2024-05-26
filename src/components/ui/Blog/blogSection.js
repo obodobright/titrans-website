@@ -5,9 +5,9 @@ import { BlogCard } from "@/components/card/BlogCard";
 
 export const BlogSection = () => {
   return (
-    <section className="w-full p-10">
+    <section className="w-full p-4 md:p-10">
       <CustomSectiomWrapper>
-        <div className="flex items-end justify-between">
+        <div className="flex items-end flex-wrap justify-between">
           <div className="max-w-md">
             <TagBadge cls="text-white bg-[#4EAF4E]">BLOG</TagBadge>
             <TextH3>Take a look at our latest articles & resources</TextH3>
@@ -16,7 +16,10 @@ export const BlogSection = () => {
             More News
           </button>
         </div>
-        <div className="my-10 grid  gap-10 grid-cols-2">
+        <div
+          style={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}
+          className="my-10 grid  gap-10 grid-cols-2"
+        >
           {Array.from({ length: 6 }).map((data, index) => (
             <BlogCard key={index} />
           ))}

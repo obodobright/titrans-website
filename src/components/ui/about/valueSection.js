@@ -7,7 +7,7 @@ export const ValueSection = () => {
   return (
     <main className="w-full py-12 px-9 bg-[#F8C648]">
       <CustomSectiomWrapper>
-        <div className="flex items-end justify-between">
+        <div className="flex items-end flex-wrap gap-2 justify-between">
           <div>
             <TagBadge cls="bg-[#4EAF4E] text-white uppercase">Growing with our Clients</TagBadge>
             <h2 className="text-4xl text-left text-[#181818] font-bold">
@@ -22,7 +22,7 @@ export const ValueSection = () => {
             View More
           </button>
         </div>
-        <div className="mt-8 grid  grid-cols-4 gap-">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-">
           {valueData.map((data, index) => (
             <ValueCard key={index} value={data} />
           ))}

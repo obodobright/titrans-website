@@ -18,14 +18,13 @@ export const TeamSection = () => {
             </p>
           </div>
         </div>
-        <div className="mt-8 grid  grid-cols-3 gap-3">
+        <div
+          style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
+          className="mt-8 grid items-center justify-center  grid-cols-3 gap-3"
+        >
           {Array.from({ length: 6 }).map((data, index) => (
             <TeamCard key={index} />
           ))}
-
-          {/* {valueData.map((data, index) => (
-            <ValueCard key={index} value={data} />
-          ))} */}
         </div>
       </CustomSectiomWrapper>
     </section>

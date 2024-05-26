@@ -7,12 +7,12 @@ import { TextH3 } from "./component/TextH2";
 export const Aboutus = () => {
   return (
     <CustomSectiomWrapper>
-      <section className="mt-12">
-        <main className=" gap-5 py-12 px- flex items-center">
+      <section className="md:mt-12">
+        <main className=" gap-5 py-12 px-3 md:px-1 flex flex-wrap md:flex-nowrap flex-col-reverse  md:flex-row  items-center">
           <div className="lg:max-w-[420px] px-3">
             <TagBadge cls="bg-[#E58F24] uppercase text-black">About Us</TagBadge>
             <TextH3>Providing Cutting Edge Tech Solutions.</TextH3>
-            <p className="font-bold my-1 text-lg ">
+            <p className="font-bold my-1 text-base md:text-lg ">
               Visionary minds revolutionizing the digital sphere through training, consultancy, and
               recruitment.
             </p>
@@ -41,11 +41,11 @@ export const Aboutus = () => {
             <img src="/asset/about.png" alt="learning-img" className="w-[700px]" />
           </div>
         </main>
-        <div className="flex pb-10 gap-8 items-center justify-center">
+        <div className="flex flex-wrap pb-10 gap-8 items-center justify-center">
           {numPer.map((num, index) => (
             <div className="mx-3 flex items-center justify-center flex-col" key={index}>
-              <h2 className="text-5xl font-bold leading-[51px]">{num.number} </h2>
-              <p className="text-lg font-medium">{num.description}</p>
+              <h2 className="text-3xl  md:text-5xl font-bold leading-[51px]">{num.number} </h2>
+              <p className="text-sm text-center md:text-lg font-medium">{num.description}</p>
             </div>
           ))}
         </div>

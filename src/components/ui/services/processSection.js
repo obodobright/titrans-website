@@ -7,7 +7,7 @@ export const ProcessSection = () => {
   return (
     <CustomSectiomWrapper>
       <section className="mt-12">
-        <main className=" gap-10 py-12 px- flex items-center">
+        <main className=" gap-10 py-12 md:px-1 flex flex-wrap md:flex-nowrap flex-col  md:flex-row">
           <div>
             <img src="/asset/process-img.png" alt="learning-img" className="w-[700px]" />
           </div>

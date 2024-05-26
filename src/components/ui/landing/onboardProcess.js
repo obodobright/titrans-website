@@ -8,7 +8,7 @@ export const ProcessSection = () => {
   return (
     <div className="w-full bg-[#F5F5F5] py-16 px-6">
       <CustomSectiomWrapper>
-        <main className="flex gap-12 items-start justify-between">
+        <main className="lg:flex gap-12 items-start justify-between">
           <div className="w-full max-w-sm ">
             <TagBadge cls="bg-[#4EAF4E] text-black">PROCESS</TagBadge>
             <div>
@@ -57,7 +57,10 @@ export const ProcessSection = () => {
               </p>
             </div>
             <div>
-              <div className="grid gap-2 grid-cols-2">
+              <div
+                style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
+                className="grid gap-2 md:grid-cols-2"
+              >
                 {coursesData.map((data, index) => (
                   <CourseCard key={index} course={data} />
                 ))}

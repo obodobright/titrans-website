@@ -5,19 +5,19 @@ export const SubScribeSection = () => {
   return (
     <section className="w-full p-10">
       <CustomSectiomWrapper>
-        <div className="w-full overflow-hidden  relative flex items-center justify-between gap-2 rounded-[20px] bg-[#181818] px-12 py-12">
+        <div className="w-full overflow-hidden  relative block md:flex items-center justify-between gap-2 rounded-[20px] bg-[#181818] px-5 md:px-12 py-12">
           <img
             src="/asset/bg-contact-pattern.png"
-            className="absolute z-0 top-0 right-0 w-44 "
+            className="absolute  -z-0 top-0 right-0 w-44 "
             alt=""
           />
-          <div>
+          <div className="relative z-10">
             <h3 className="font-semibold text-3xl text-white">Subscribe Our Newsletter</h3>
             <p className="text-sm font-bold text-white">
               Build stronger Customer Relationships with Consultalk
             </p>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="md:flex my-3 md:my-auto  items-center gap-2">
             <input
               placeholder="your mail address"
               type="text"

@@ -13,7 +13,7 @@ export const BlogCard = () => {
         approaches to corporate strategy foster collaborative thinking to further the overall value
         proposition.
       </p>
-      <div className="border-t flex items-center justify-between mt-5 border-b py-2 px-1">
+      <div className="border-t flex flex-wrap gap-2 items-center justify-between mt-5 border-b py-2 px-1">
         <div className="flex items-center justify-start gap-2">
           <div className="w-8 h-8 rounded-full bg-black overflow-hidden flex items-center justify-center">
             <img src="/asset/blog-writer-img.png" className="object-cover" alt="" />
@@ -24,7 +24,7 @@ export const BlogCard = () => {
           </p>
         </div>
 
-        <button className="h-10 bg-[#000] rounded-full px-7 text-center text-white text-lg font-semibold">
+        <button className="h-8 md:h-10 bg-[#000] rounded-full px-3 md:px-7 text-center text-white text-sm md:text-lg font-semibold">
           Read More
         </button>
       </div>

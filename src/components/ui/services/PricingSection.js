@@ -13,7 +13,10 @@ export const PricingSection = () => {
             <TagBadge cls="bg-[#4EAF4E] text-white">PRICING</TagBadge>
             <TextH3>Our Pricing Plan</TextH3>
           </div>
-          <div className="mt-6 grid grid-cols-3 gap-3">
+          <div
+            style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
+            className="mt-6 grid grid-cols-3 gap-3"
+          >
             <PricingCard plan="Basic Plan" amount="$35" />
             <PricingCard isPopular={true} plan="Standard Plan" amount="$56" />
             <PricingCard plan="Premium Plan" amount="$75" />
