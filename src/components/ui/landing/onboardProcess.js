@@ -16,36 +16,28 @@ export const ProcessSection = () => {
         <main className="lg:flex gap-12 items-start justify-between">
           <div className="w-full max-w-sm ">
             <TagBadge cls="bg-[#4EAF4E] text-black">PROCESS</TagBadge>
-            <motion.div
-              ref={ref}
-              animate={isInView ? "visible" : "hidden"}
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5 }}
-              initial="hidden"
-            >
-              <h3 className="font-bold text-3xl">Our learning model</h3>
-              <p className="my-3 text-base font-normal text-[#595566]">
+            <motion.div>
+              <motion.h3
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5 }}
+                initial="hidden"
+                className="font-bold text-3xl"
+              >
+                Our learning model
+              </motion.h3>
+              <motion.p className="my-3 text-base font-normal text-[#595566]">
                 Designed over the years by industry experts, we embark on a learning journey across
                 the entire digital product life-cycle. We are confident you will be industry ready.
-              </p>
+              </motion.p>
             </motion.div>
-            <div className="mt-12">
+            <motion.div className="mt-12">
               {processData.map((processes, index) => (
-                <motion.div
-                  ref={ref}
-                  animate={isInView ? "visible" : "hidden"}
-                  variants={{
-                    hidden: { opacity: 0, y: 10 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 1 }}
-                  initial="hidden"
-                  key={index}
-                  className="mb-12 border-t pt-5 flex items-start gap-2 "
-                >
+                <motion.div key={index} className="mb-12 border-t pt-5 flex items-start gap-2 ">
                   <div
                     className={`w-12 h-12 rounded-full  ${processes.bg} ${processes.color} flex justify-center items-center text-2xl`}
                   >
@@ -63,19 +55,19 @@ export const ProcessSection = () => {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
           <div className="w-full ">
             <TagBadge cls="bg-[#E58F24] text-white">BECOME AN IT INTERN</TagBadge>
             <motion.div
-              ref={ref}
-              animate={isInView ? "visible" : "hidden"}
-              variants={{
-                hidden: { opacity: 0, y: 10 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.5 }}
-              initial="hidden"
+            // ref={ref}
+            // animate={isInView ? "visible" : "hidden"}
+            // variants={{
+            //   hidden: { opacity: 0, y: 10 },
+            //   visible: { opacity: 1, y: 0 },
+            // }}
+            // transition={{ duration: 0.5 }}
+            // initial="hidden"
             >
               <h3 className="font-bold text-3xl">
                 Join our 6 months internship to launch your tech career
@@ -92,14 +84,14 @@ export const ProcessSection = () => {
             </motion.div>
             <div>
               <motion.div
-                ref={ref}
-                animate={isInView ? "visible" : "hidden"}
-                variants={{
-                  hidden: { opacity: 0, y: 10 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.8 }}
-                initial="hidden"
+                // ref={ref}
+                // animate={isInView ? "visible" : "hidden"}
+                // variants={{
+                //   hidden: { opacity: 0, y: 10 },
+                //   visible: { opacity: 1, y: 0 },
+                // }}
+                // transition={{ duration: 0.5 }}
+                // initial="hidden"
                 style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
                 className="grid gap-2 md:grid-cols-2"
               >
@@ -117,7 +109,7 @@ export const ProcessSection = () => {
             hidden: { opacity: 0, y: 10 },
             visible: { opacity: 1, y: 0 },
           }}
-          transition={{ duration: 1.2 }}
+          transition={{ duration: 0.5 }}
           initial="hidden"
           className="flex items-center justify-center mt-10"
         >
