@@ -2,8 +2,12 @@
 import { TagBadge } from "@/components/Tag";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { TextH3 } from "../landing/component/TextH2";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const ProcessSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <CustomSectiomWrapper>
       <section className="mt-12">
@@ -13,19 +17,50 @@ export const ProcessSection = () => {
           </div>
           <div className="lg:max-w-[420px] px-3">
             <TagBadge cls="bg-[#E58F24] text-black">Process</TagBadge>
-            <TextH3>Our Creative Services & Development</TextH3>
+            <motion.div
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+            >
+              <TextH3>Our Creative Services & Development</TextH3>
+            </motion.div>
             <div className="mt-4">
-              <div className="flex items-start gap-3 my-2">
+              <motion.div
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                initial="hidden"
+                className="flex items-start gap-3 my-2"
+              >
                 <FileIcon />
-                <div>
+                <motion.div>
                   <h3 className="font-semibold text-base text-[#181818]">Training & Mentorship</h3>
                   <p className="text-sm font-normal text-[#595566]">
                     Professionally fashion wireless leadership rather than prospective experiences
                     my cardinate clicks-and-mortar testing whereas.
                   </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 my-2">
+                </motion.div>
+              </motion.div>
+              <motion.div
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5, delay: 0.8 }}
+                initial="hidden"
+                className="flex items-start gap-3 my-2"
+              >
                 <SettingsIcon />
                 <div>
                   <h3 className="font-semibold text-base text-[#181818]">IT consultancy</h3>
@@ -34,8 +69,18 @@ export const ProcessSection = () => {
                     capital. Interactively actualize front-end processes.
                   </p>
                 </div>
-              </div>
-              <div className="flex items-start gap-3 my-2">
+              </motion.div>
+              <motion.div
+                ref={ref}
+                animate={isInView ? "visible" : "hidden"}
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+                initial="hidden"
+                className="flex items-start gap-3 my-2"
+              >
                 <LineIcon />
                 <div>
                   <h3 className="font-medium text-base text-[#181818]">
@@ -46,7 +91,7 @@ export const ProcessSection = () => {
                     task fully researched data and enterprise.
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </main>

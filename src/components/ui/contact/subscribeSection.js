@@ -1,11 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
 import { CustomSectiomWrapper } from "@/components/customWrapper";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const SubScribeSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section className="w-full p-10">
       <CustomSectiomWrapper>
-        <div className="w-full overflow-hidden  relative block md:flex items-center justify-between gap-2 rounded-[20px] bg-[#181818] px-5 md:px-12 py-12">
+        <motion.div
+          ref={ref}
+          animate={isInView ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+          initial="hidden"
+          className="w-full overflow-hidden  relative block md:flex items-center justify-between gap-2 rounded-[20px] bg-[#181818] px-5 md:px-12 py-12"
+        >
           <img
             src="/asset/bg-contact-pattern.png"
             className="absolute  -z-0 top-0 right-0 w-44 "
@@ -28,7 +43,7 @@ export const SubScribeSection = () => {
               Subscribe
             </button>
           </div>
-        </div>
+        </motion.div>
       </CustomSectiomWrapper>
     </section>
   );

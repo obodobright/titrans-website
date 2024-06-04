@@ -3,11 +3,26 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { SmileIcon, StarIcon } from "@/components/icons";
 import { numPer } from "@/helper/data";
 import { TextH3 } from "./component/TextH2";
+import { useRef } from "react";
+import { useInView, motion } from "framer-motion";
 
 export const Aboutus = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <CustomSectiomWrapper>
-      <section className="md:mt-12">
+      <motion.section
+        ref={ref}
+        animate={isInView ? "visible" : "hidden"}
+        variants={{
+          hidden: { opacity: 0, y: 10 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.5 }}
+        initial="hidden"
+        className="md:mt-12"
+      >
         <main className=" gap-5 py-12 px-3 md:px-1 flex flex-wrap md:flex-nowrap flex-col-reverse  md:flex-row  items-center">
           <div className="lg:max-w-[420px] px-3">
             <TagBadge cls="bg-[#E58F24] uppercase text-black">About Us</TagBadge>
@@ -38,18 +53,40 @@ export const Aboutus = () => {
             </div>
           </div>
           <div>
-            <img src="/asset/about.png" alt="learning-img" className="w-[700px]" />
+            <motion.img
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              initial="hidden"
+              src="/asset/about.png"
+              alt="learning-img"
+              className="w-[700px]"
+            />
           </div>
         </main>
-        <div className="flex flex-wrap pb-10 gap-8 items-center justify-center">
+        <motion.div
+          ref={ref}
+          animate={isInView ? "visible" : "hidden"}
+          variants={{
+            hidden: { opacity: 0, y: 10 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 0.5 }}
+          initial="hidden"
+          className="flex flex-wrap pb-10 gap-8 items-center justify-center"
+        >
           {numPer.map((num, index) => (
             <div className="mx-3 flex items-center justify-center flex-col" key={index}>
               <h2 className="text-3xl  md:text-5xl font-bold leading-[51px]">{num.number} </h2>
               <p className="text-sm text-center md:text-lg font-medium">{num.description}</p>
             </div>
           ))}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </CustomSectiomWrapper>
   );
 };

@@ -2,8 +2,12 @@ import { TagBadge } from "@/components/Tag";
 import { JobCard } from "@/components/card/jobCard";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { jobData } from "@/helper/data";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const JobSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <main className="w-full relative">
       <section
@@ -14,7 +18,15 @@ export const JobSection = () => {
       ></section>
       <CustomSectiomWrapper>
         <div className="text-white relative -top-[300px] ">
-          <div className="flex items-end px-2 flex-wrap gap-2 justify-between">
+          <motion.div
+            ref={ref}
+            animate={isInView ? "visible" : "hidden"}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="flex items-end px-2 flex-wrap gap-2 justify-between"
+          >
             <div>
               <TagBadge cls="text-black bg-[#4EAF4E]">HOT JOBS</TagBadge>
               <h3 className="font-bold text-[40px] text-white max-w- max-w-lg">
@@ -24,15 +36,23 @@ export const JobSection = () => {
             <button className="h-12 px-6 text-center rounded-[42px] bg-[#E58F24] text-white">
               View More
             </button>
-          </div>
-          <div
+          </motion.div>
+          <motion.div
+            ref={ref}
+            animate={isInView ? "visible" : "hidden"}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            initial="hidden"
             style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
             className="bg-[#FAFAFA] gap-3 items-center justify-center grid grid-cols-3 gap- py-2 px-4 mt-9 rounded-[30px]"
           >
             {jobData.map((data, index) => (
               <JobCard key={index} job={data} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </CustomSectiomWrapper>
     </main>

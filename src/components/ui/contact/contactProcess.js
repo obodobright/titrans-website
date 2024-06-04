@@ -3,20 +3,55 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { TextH3 } from "../landing/component/TextH2";
 import { FiPhone } from "react-icons/fi";
 import { CiClock2, CiLocationOn } from "react-icons/ci";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const ContactSectionProcess = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="w-full p-10">
       <CustomSectiomWrapper>
         <div className="md:flex  items-center gap-12">
           <div className="max-w-md">
             <TagBadge cls="bg-[#FFCC4A] text-white">PROCESS</TagBadge>
-            <TextH3>Contact Us. It’s Easy.</TextH3>
-            <p className="font-normal text-[#595566] my-1 text-lg ">
+            <motion.div
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+            >
+              <TextH3>Contact Us. It’s Easy.</TextH3>
+            </motion.div>{" "}
+            <motion.p
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              initial="hidden"
+              className="font-normal text-[#595566] my-1 text-lg "
+            >
               Leverage agile frameworks to provide a robust synopsis for high level overviews.
               Iterative approaches to corporate strategy foster collaborative.
-            </p>
-            <div className="mt-6">
+            </motion.p>
+            <motion.div
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              initial="hidden"
+              className="mt-6"
+            >
               <div className="flex items-start gap-3 my-6">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#FFECBB]">
                   <FiPhone color="#DEAA27" />
@@ -46,10 +81,20 @@ export const ContactSectionProcess = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div>
-            <form action="">
+            <motion.form
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              initial="hidden"
+              action=""
+            >
               <section className="grid grid-cols-2 gap-3">
                 <ContactForm placeholder="John David" label="Full Name" />
                 <ContactForm placeholder="consult@mail.com" label="Email" />
@@ -60,7 +105,7 @@ export const ContactSectionProcess = () => {
                 placeholder="Briefly tell us about your project and your current goals. How can we help you?"
                 label="Message"
               />
-            </form>
+            </motion.form>
           </div>
         </div>
       </CustomSectiomWrapper>

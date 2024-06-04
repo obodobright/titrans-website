@@ -5,8 +5,12 @@ import { TextH3 } from "../landing/component/TextH2";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const ContactSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <CustomSectiomWrapper>
       <section className="mt-12">
@@ -16,12 +20,42 @@ export const ContactSection = () => {
           </div>
           <div className="lg:max-w-[420px] px-3">
             <TagBadge cls="bg-[#4EAF4E] text-white">Let’s talk</TagBadge>
-            <TextH3>Get In Touch With Us</TextH3>
-            <p className="font-normal text-[#595566] my-1 text-lg ">
+            <motion.div
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5 }}
+              initial="hidden"
+            >
+              <TextH3>Get In Touch With Us</TextH3>{" "}
+            </motion.div>{" "}
+            <motion.p
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              initial="hidden"
+              className="font-normal text-[#595566] my-1 text-lg "
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore.
-            </p>
-            <div>
+            </motion.p>
+            <motion.div
+              ref={ref}
+              animate={isInView ? "visible" : "hidden"}
+              variants={{
+                hidden: { opacity: 0, y: 10 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              initial="hidden"
+            >
               <div className="flex items-start gap-3 my-2">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#181818]">
                   <FiPhone color="white" />
@@ -51,7 +85,7 @@ export const ContactSection = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </main>
       </section>
