@@ -43,8 +43,8 @@ export const ContactSection = () => {
               initial="hidden"
               className="font-normal text-[#595566] my-1 text-lg "
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore.
+              Our team is ready to assist you with any inquiries or support you need. Don’t hesitate
+              to reach out.
             </motion.p>
             <motion.div
               ref={ref}

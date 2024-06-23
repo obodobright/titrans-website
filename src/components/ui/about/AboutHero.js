@@ -9,7 +9,7 @@ export const AboutHero = () => {
       <CustomSectiomWrapper>
         <HeroMirror>
           <TagBadge cls="bg-[#FFCC4A] text-black">ABOUT US</TagBadge>
-          <TextH2>Providing Cutting Edge Tech Solutions.</TextH2>
+          <TextH2>Transforming Dreams into Digital Realities</TextH2>
         </HeroMirror>
       </CustomSectiomWrapper>
     </HeroLayout>

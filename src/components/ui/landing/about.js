@@ -5,10 +5,21 @@ import { numPer } from "@/helper/data";
 import { TextH3 } from "./component/TextH2";
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
+import { StatsCount } from "@/components/statsCount";
+import { useCountingNumber } from "@/components/animation";
+import { animated, useSpring } from "@react-spring/web";
+import { useCount } from "@/components/animation/useCount";
 
 export const Aboutus = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const { count } = useCount(50, 100);
+  const { count: serviceCount } = useCount(200, 400);
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: 100,
+    config: { duration: 2000 },
+  });
 
   return (
     <CustomSectiomWrapper>
@@ -39,14 +50,17 @@ export const Aboutus = () => {
               <div className="text-center bg-[#F6F6F6] p-3 rounded-2xl flex items-center justify-center flex-col py-3">
                 <div className="flex items-center gap-1 justify-center">
                   <StarIcon />
-                  <p className="font-bold text-2xl ">400+</p>
+                  <p className="font-bold text-2xl ">{serviceCount}+</p>
                 </div>
                 <span className="text-base font-bold ">Business Services</span>
               </div>
               <div className="text-center bg-[#F6F6F6] p-3 rounded-2xl flex items-center justify-center flex-col py-3">
                 <div className="flex items-center justify-center gap-1">
                   <SmileIcon />
-                  <p className="font-bold text-2xl ">100+</p>
+                  {/* <animated.span>{myNumber.to((n) => n.toFixed(0))}</animated.span> */}
+                  <animated.p className="font-bold text-2xl ">
+                    {count}+{/* {number.to((n) => n.toFixed(0))}+ */}
+                  </animated.p>
                 </div>
                 <span className="text-base font-bold ">Happy Customers</span>
               </div>
@@ -80,10 +94,7 @@ export const Aboutus = () => {
           className="flex flex-wrap pb-10 gap-8 items-center justify-center"
         >
           {numPer.map((num, index) => (
-            <div className="mx-3 flex items-center justify-center flex-col" key={index}>
-              <h2 className="text-3xl  md:text-5xl font-bold leading-[51px]">{num.number} </h2>
-              <p className="text-sm text-center md:text-lg font-medium">{num.description}</p>
-            </div>
+            <StatsCount num={num} key={index} />
           ))}
         </motion.div>
       </motion.section>

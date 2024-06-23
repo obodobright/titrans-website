@@ -7,7 +7,7 @@ export const ValueCard = ({ value }) => {
       <div>
         <h3 className="font-semibold mt-2 text-lg text-[#181818]">{value.name}</h3>
         <p className="text-base font-normal  my-2 text-[#595566]">{value.description}</p>
-        <Link href="/">
+        {/* <Link href="/">
           <button className="flex gap-2 mt-2 items-center">
             <span className="text-lg font-semibold">Read More</span>
             <svg
@@ -23,7 +23,7 @@ export const ValueCard = ({ value }) => {
               />
             </svg>
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

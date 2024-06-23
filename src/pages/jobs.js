@@ -12,7 +12,7 @@ export default function Jobs() {
         <CustomSectiomWrapper>
           <HeroMirror>
             <TagBadge cls="bg-[#FFCC4A]">JOB OPPORTUNITIES</TagBadge>
-            <TextH2>Providing Cutting Edge Tech Solutions.</TextH2>
+            <TextH2>Join Our Team and Shape the Future </TextH2>
           </HeroMirror>
         </CustomSectiomWrapper>
       </HeroLayout>

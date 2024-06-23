@@ -4,6 +4,7 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { FaqAccordion } from "./FaqAccordion";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { faq } from "@/helper/data";
 
 export const FAQSection = () => {
   const ref = useRef(null);
@@ -38,12 +39,9 @@ export const FAQSection = () => {
             initial="hidden"
             className="max-w-xl mt-6  mx-auto"
           >
-            <FaqAccordion />
-            <FaqAccordion />
-            <FaqAccordion />
-            <FaqAccordion />
-            <FaqAccordion />
-            <FaqAccordion />
+            {faq.map((faqData, faqIndex) => (
+              <FaqAccordion key={faqIndex} question={faqData.question} answer={faqData.answer} />
+            ))}
           </motion.div>
         </main>
       </CustomSectiomWrapper>

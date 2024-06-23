@@ -5,6 +5,7 @@ import { numPer } from "@/helper/data";
 import { CheckMark } from "@/components/icons";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { StatsCount } from "@/components/statsCount";
 
 export const VisionSection = () => {
   const ref = useRef(null);
@@ -56,8 +57,7 @@ export const VisionSection = () => {
                 <CheckMark />
               </div>
               <p className="my-2 text-[#595566] font-normal text-base ">
-                Bring to the table win-win survival strategies to ensure proactive domination. At
-                the end of the day.
+                Be the catalyst for transformative growth in the IT industry.
               </p>
             </motion.div>
             <motion.div
@@ -75,8 +75,7 @@ export const VisionSection = () => {
                 <CheckMark />
               </div>
               <p className="my-2 text-[#595566] font-normal text-base ">
-                Capitalize on low hanging fruit to identify a ballpark value added activity to beta
-                test override the digital.
+                Foster a vibrant ecosystem of learning and innovation.
               </p>
             </motion.div>
           </div>
@@ -96,10 +95,7 @@ export const VisionSection = () => {
           className="flex flex-wrap pb-10 gap-8 items-center justify-center"
         >
           {numPer.map((num, index) => (
-            <div className="mx-3 flex items-center justify-center flex-col" key={index}>
-              <h2 className="text-3xl  md:text-5xl font-bold leading-[51px]">{num.number} </h2>
-              <p className="text-sm text-center md:text-lg font-medium">{num.description}</p>
-            </div>
+            <StatsCount num={num} key={index} />
           ))}
         </motion.div>
       </section>

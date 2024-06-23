@@ -9,7 +9,7 @@ export const ServiceHero = () => {
       <CustomSectiomWrapper>
         <HeroMirror>
           <TagBadge cls="bg-[#FFCC4A] text-black">SERVICES</TagBadge>
-          <TextH2>Creative Services For exceptional Business Growth</TextH2>
+          <TextH2>Unlocking Potential through Innovative Solutions</TextH2>
         </HeroMirror>
       </CustomSectiomWrapper>
     </HeroLayout>

@@ -14,7 +14,7 @@ export default function Contact() {
         <CustomSectiomWrapper>
           <HeroMirror>
             <TagBadge cls="bg-[#FFCC4A] text-black">Contact us</TagBadge>
-            <TextH2>Feel Free To Reach Us.</TextH2>
+            <TextH2>We’re Here to Help and Answer Any Questions </TextH2>
           </HeroMirror>
         </CustomSectiomWrapper>
       </HeroLayout>

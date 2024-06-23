@@ -2,6 +2,7 @@ import { TagBadge } from "@/components/Tag";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { TextH3 } from "../landing/component/TextH2";
 import { BlogCard } from "@/components/card/BlogCard";
+import { BlogData } from "@/helper/data";
 
 export const BlogSection = () => {
   return (
@@ -20,8 +21,8 @@ export const BlogSection = () => {
           style={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}
           className="my-10 grid  gap-10 grid-cols-2"
         >
-          {Array.from({ length: 6 }).map((data, index) => (
-            <BlogCard key={index} />
+          {BlogData.map((data, index) => (
+            <BlogCard data={data} key={index} />
           ))}
         </div>
       </CustomSectiomWrapper>

@@ -38,8 +38,8 @@ export const ContactSectionProcess = () => {
               initial="hidden"
               className="font-normal text-[#595566] my-1 text-lg "
             >
-              Leverage agile frameworks to provide a robust synopsis for high level overviews.
-              Iterative approaches to corporate strategy foster collaborative.
+              We value your questions and feedback. Connect with us effortlessly through any of our
+              contact options.
             </motion.p>
             <motion.div
               ref={ref}

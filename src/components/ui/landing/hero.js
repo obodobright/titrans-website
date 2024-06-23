@@ -22,10 +22,9 @@ export const HeroBanner = () => {
       </div>
       <CustomSectiomWrapper>
         <HeroMirror>
-          <TextH2>Your Small Business Growth Advisors</TextH2>
+          <TextH2>Building the Future, One Solution at a Time</TextH2>
           <p className="text-[#595566] text-base font-normal mt-3">
-            Get help Alex Moore, a professional business coach with advanced experienced on growth
-            and business scaling{" "}
+            Your Journey to Excellence Starts Here.
           </p>
           <div className="flex items-center gap-3 mt-8">
             <button className="h-12 bg-black text-white text-sm md:text-base rounded-[42px] px-5">

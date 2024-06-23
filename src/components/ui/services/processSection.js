@@ -27,7 +27,7 @@ export const ProcessSection = () => {
               transition={{ duration: 0.5 }}
               initial="hidden"
             >
-              <TextH3>Our Creative Services & Development</TextH3>
+              <TextH3>Comprehensive Services Tailored to Your Needs</TextH3>
             </motion.div>
             <div className="mt-4">
               <motion.div
