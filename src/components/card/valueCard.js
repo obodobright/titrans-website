@@ -2,11 +2,15 @@ import Link from "next/link";
 
 export const ValueCard = ({ value }) => {
   return (
-    <div className="m-2 h-fit rounded-md bg-white py-6 px-4 ">
-      {value.icon}
+    <div className="m-2 h-fit rounded-md bg-white hover:bg-black hover:shadow scale-100 hover:scale-[1.03] transition-all group py-6 px-4 ">
+      <div className="scale-100 group-hover:scale-110 transition-all">{value.icon}</div>
       <div>
-        <h3 className="font-semibold mt-2 text-lg text-[#181818]">{value.name}</h3>
-        <p className="text-base font-normal  my-2 text-[#595566]">{value.description}</p>
+        <h3 className="font-semibold group-hover:text-white mt-2 transition-all text-lg text-[#181818]">
+          {value.name}
+        </h3>
+        <p className="text-base font-normal group-hover:text-white transition-all  my-2 text-[#595566]">
+          {value.description}
+        </p>
         {/* <Link href="/">
           <button className="flex gap-2 mt-2 items-center">
             <span className="text-lg font-semibold">Read More</span>
