@@ -8,7 +8,7 @@ import { JobSection } from "@/components/ui/landing/jobsSection";
 export default function Jobs() {
   return (
     <CustomLayout>
-      <HeroLayout bg="hero-about.png">
+      <HeroLayout bg="https://ik.imagekit.io/hydekcjmz/titrans/job-titrans.png?updatedAt=1719580310703">
         <CustomSectiomWrapper>
           <HeroMirror>
             <TagBadge cls="bg-[#FFCC4A]">JOB OPPORTUNITIES</TagBadge>

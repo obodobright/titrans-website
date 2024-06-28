@@ -66,7 +66,7 @@ export const Aboutus = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="scale-100 hover:scale-105 transition-all">
             <motion.img
               ref={ref}
               animate={isInView ? "visible" : "hidden"}

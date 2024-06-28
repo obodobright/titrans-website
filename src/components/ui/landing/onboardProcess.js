@@ -59,16 +59,7 @@ export const ProcessSection = () => {
           </div>
           <div className="w-full ">
             <TagBadge cls="bg-[#E58F24] text-white">BECOME AN IT INTERN</TagBadge>
-            <motion.div
-            // ref={ref}
-            // animate={isInView ? "visible" : "hidden"}
-            // variants={{
-            //   hidden: { opacity: 0, y: 10 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
-            // transition={{ duration: 0.5 }}
-            // initial="hidden"
-            >
+            <motion.div>
               <h3 className="font-bold text-3xl">
                 Join our 6 months internship to launch your tech career
               </h3>
@@ -84,14 +75,6 @@ export const ProcessSection = () => {
             </motion.div>
             <div>
               <motion.div
-                // ref={ref}
-                // animate={isInView ? "visible" : "hidden"}
-                // variants={{
-                //   hidden: { opacity: 0, y: 10 },
-                //   visible: { opacity: 1, y: 0 },
-                // }}
-                // transition={{ duration: 0.5 }}
-                // initial="hidden"
                 style={{ gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))" }}
                 className="grid gap-2 md:grid-cols-2"
               >
@@ -113,7 +96,7 @@ export const ProcessSection = () => {
           initial="hidden"
           className="flex items-center justify-center mt-10"
         >
-          <button className="h-10 gap-2 px-6 rounded-[42px] bg-[#181818] text-white flex items-center justify-center">
+          <button className="h-10 animate-pulse hover:bg-[#E58F24] gap-2 px-6 rounded-[42px] bg-[#181818] text-white flex items-center justify-center">
             <span className="text-base font-medium">Register</span>
 
             <RightArrow />

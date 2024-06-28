@@ -36,11 +36,11 @@ export const SubScribeSection = () => {
             <input
               placeholder="your mail address"
               type="text"
-              className="w-full h-10 rounded-full bg-white px-4 outline-none "
+              className="w-full hover:placeholder:text-black hover:border-[#E58F24] hover:border h-10 rounded-full bg-white px-4 outline-none "
             />
-            <button className="h-10 rounded-[42px] text-base font-semibold px-6 my-1 bg-[#FFCC4A]">
+            <button className="h-10 relative z-30   rounded-[42px] text-base font-semibold px-6 my-1 bg-[#FFCC4A] cursor-pointer hover:bg-[#fff] transition-all">
               {" "}
-              Subscribe
+              Subscribes
             </button>
           </div>
         </motion.div>

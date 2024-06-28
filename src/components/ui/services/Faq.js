@@ -14,7 +14,7 @@ export const FAQSection = () => {
       <CustomSectiomWrapper>
         <main>
           <div className="flex items-center justify-center flex-col">
-            <TagBadge cls="bg-[#4EAF4E] text-white">PRICING</TagBadge>
+            <TagBadge cls="bg-[#4EAF4E] text-white">FAQ</TagBadge>
             <motion.div
               ref={ref}
               animate={isInView ? "visible" : "hidden"}

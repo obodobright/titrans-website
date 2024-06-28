@@ -10,7 +10,7 @@ import { HeroLayout, HeroMirror } from "@/components/ui/landing/component/heroMi
 export default function Contact() {
   return (
     <CustomLayout>
-      <HeroLayout bg="contact-hero.png">
+      <HeroLayout bg="https://ik.imagekit.io/hydekcjmz/titrans/contact-titrans.png?updatedAt=1719580310671">
         <CustomSectiomWrapper>
           <HeroMirror>
             <TagBadge cls="bg-[#FFCC4A] text-black">Contact us</TagBadge>

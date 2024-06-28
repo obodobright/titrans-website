@@ -4,6 +4,8 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { PhoneIcon } from "@/components/icons";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { FaPhone } from "react-icons/fa";
+import { BsTelephone } from "react-icons/bs";
 
 export const Call2Action = () => {
   const ref = useRef(null);
@@ -20,7 +22,7 @@ export const Call2Action = () => {
           }}
           transition={{ duration: 0.5 }}
           initial="hidden"
-          className="w-full  bg-black rounded-[30px]  flex items-center justify-between "
+          className="w-full  overflow-hidden bg-black rounded-[30px]  flex items-center justify-between "
         >
           <motion.div
             ref={ref}
@@ -41,12 +43,12 @@ export const Call2Action = () => {
               Our software development agency has a growth up to 30% per each year. If you are
               result-oriented, not afraid to take initiative – drop us a note and join our team!
             </p>
-            <button className="mt-4 flex items-center justify-start gap-1 bg-[#FFCC4A] px-7 pl-4 h-11 rounded-full text-black">
-              <PhoneIcon />
-              <span>+44 7761 425 493</span>
+            <button className="mt-4 group transition-all hover:bg-[#edba3b] scale-100 hover:scale-105 flex items-center justify-start gap-1 bg-[#FFCC4A] px-7 pl-4 h-11 rounded-full text-black">
+              <BsTelephone className="group-hover:text-white" fontSize={20} />
+              <span className="group-hover:text-white">+44 7761 425 493</span>
             </button>
           </motion.div>
-          <div className="px-12 hidden md:block">
+          <div className="px-12 hidden transition-all scale-100 hover:scale-105 md:block">
             <img className="w-[550px]" src="/asset/call-action.png" alt="register-today-img" />
           </div>
         </motion.div>

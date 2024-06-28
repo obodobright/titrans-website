@@ -8,7 +8,7 @@ import { HeroLayout, HeroMirror } from "@/components/ui/landing/component/heroMi
 export default function Blogs() {
   return (
     <CustomLayout>
-      <HeroLayout bg="bg-blog-hero.png">
+      <HeroLayout bg="https://ik.imagekit.io/hydekcjmz/titrans/blog-titrans.png?updatedAt=1719580310618">
         <CustomSectiomWrapper>
           <HeroMirror>
             <TagBadge cls="bg-[#FFCC4A] text-black uppercase">Blog</TagBadge>

@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { CustomSectiomWrapper } from "../customWrapper";
 import { BrandLogo, FBIConDark, IGIConDark, LinkInIConDark, XIConDark } from "../icons";
+import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -28,10 +30,21 @@ export const Footer = () => {
             <div className="block lg:flex gap-12 items-start">
               <ul>
                 <LiTitle>Pages</LiTitle>
-                <Li>Home</Li>
-                <Li>About</Li>
-                <Li>Work</Li>
-                <Li>Pricing</Li>
+                <Li>
+                  <Link className="hover:text-[#E58F24] transition-all" href="/">
+                    Home
+                  </Link>
+                </Li>
+                <Li>
+                  <Link className="hover:text-[#E58F24] transition-all" href="/about-us">
+                    About
+                  </Link>
+                </Li>
+                <Li>
+                  <Link className="hover:text-[#E58F24] transition-all" href="/services">
+                    Services
+                  </Link>
+                </Li>
               </ul>
               <ul>
                 <LiTitle>Contact</LiTitle>
@@ -44,18 +57,47 @@ export const Footer = () => {
                 <div className="flex items-center gap-2">
                   <input
                     type="text"
-                    className="h-12 rounded-[40px] outline-none bg-white border px-2 border-[#D3D3D3]"
+                    className="h-12  hover:placeholder:text-black hover:border-[#E58F24] transition-all  rounded-[40px] outline-none bg-white border px-2 border-[#D3D3D3]"
                     placeholder="enter your mail... "
                   />
-                  <button className="h-12 text-white px-4 rounded-[40px] text-center bg-black">
+                  <button className="h-12 text-white hover:bg-[#E58F24] transition-all px-4 rounded-[40px] text-center bg-black">
                     Submit
                   </button>
                 </div>
                 <div className="flex pl-2 pt-5 items-center justify-start gap-2">
-                  <IGIConDark />
-                  <FBIConDark />
-                  <XIConDark />
-                  <LinkInIConDark />
+                  <Link
+                    target="_blank"
+                    href="https://www.instagram.com/titranstech?igsh=aGc3MWxlNTh2OGg2"
+                  >
+                    <FaInstagram
+                      className="text-[#030211] hover:text-[#E58F24] transition-all scale-100 hover:scale-110"
+                      fontSize={25}
+                    />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://web.facebook.com/p/Titrans-Technology-100067238292329"
+                  >
+                    <FaFacebook
+                      className="text-[#030211] hover:text-[#E58F24] transition-all scale-100 hover:scale-110"
+                      fontSize={25}
+                    />
+                  </Link>
+                  <Link target="_blank" href="https://twitter.com/TitransTech">
+                    <FaTwitter
+                      className="text-[#030211] hover:text-[#E58F24] transition-all scale-100 hover:scale-110"
+                      fontSize={25}
+                    />
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://ng.linkedin.com/in/titrans-technology-165bab1a9"
+                  >
+                    <FaLinkedin
+                      className="text-[#030211] hover:text-[#E58F24] transition-all scale-100 hover:scale-110"
+                      fontSize={25}
+                    />
+                  </Link>
                 </div>
               </ul>
             </div>
@@ -79,5 +121,5 @@ export const LiTitle = ({ children }) => {
 };
 
 export const Li = ({ cls, children }) => {
-  return <li className={`font-medium leading-8 text-lg ${cls}`}>{children}</li>;
+  return <li className={`font-medium   leading-8 text-lg ${cls}`}>{children}</li>;
 };

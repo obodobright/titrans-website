@@ -121,7 +121,7 @@ export const ContactForm = ({ label, placeholder }) => {
       </label>
       <input
         type="text"
-        className="h-10 w-full outline-none border rounded-full px-3"
+        className="h-10 w-full hover:placeholder:text-black hover:border-[#E58F24] transition-all outline-none border rounded-full px-3"
         placeholder={placeholder}
       />
     </section>
@@ -137,7 +137,7 @@ export const ContactTextField = ({ label, placeholder }) => {
       <textarea
         name={label}
         placeholder={placeholder}
-        className="h-28  w-full outline-none border rounded-[22px] py-2 px-3"
+        className="h-28 hover:border-[#E58F24] transition-all w-full outline-none border rounded-[22px] py-2 px-3"
         id=""
       ></textarea>
     </section>

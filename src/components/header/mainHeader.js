@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa6";
 import { MobileHeader } from "./mobileHeader";
+import { FiPhone } from "react-icons/fi";
 
 export const MainNavHeader = () => {
   const router = useRouter();
@@ -20,16 +21,16 @@ export const MainNavHeader = () => {
             <ul className="hidden lg:flex gap-3 items-center justify-center">
               {navData.map((nav, index) => (
                 <Link href={nav.link} key={index}>
-                  <div className="flex items-center justify-start gap-2">
+                  <div className="flex transition-all  group  items-center justify-start gap-2">
                     <div
-                      className={`w-3 h-3 rounded-full border  ${
+                      className={`w-3 h-3 group-hover:bg-[#E58F24] group-hover:border-[#E58F24] rounded-full border  ${
                         isActive(nav.link)
                           ? "bg-[#E58F24] border-transparent"
                           : "bg-transparent border-black"
                       } `}
                     ></div>
                     <p
-                      className={`text-lg font-normal ${
+                      className={`text-lg group-hover:text-[#E58F24] transition-all font-normal ${
                         isActive(nav.link) ? "text-[#E58F24]" : "text-[#707070]"
                       }`}
                     >
@@ -40,11 +41,11 @@ export const MainNavHeader = () => {
               ))}
             </ul>
           </>
-          <div className="bg-[#EBEBEB] hidden lg:flex items-center justify-start rounded-[42px] gap-2 pl-2 pr-6 h-14">
-            <div className="flex items-center w-10 h-10 justify-center p-2 rounded-full bg-[#E58F24]">
-              <PhoneIcon />
+          <div className="bg-[#EBEBEB] hover:cursor-pointer transition-all hover:bg-[#E58F24] group hidden lg:flex items-center justify-start rounded-[42px] gap-2 pl-2 pr-6 h-14">
+            <div className="flex items-center w-10 h-10 justify-center p-2 rounded-full bg-[#E58F24] group-hover:bg-black">
+              <FiPhone className="group-hover:text-white" fontSize={20} />
             </div>
-            <p>+44 7761 425 493</p>
+            <p className="group-hover:text-white">+44 7761 425 493</p>
           </div>
           <FaBars fontSize={20} role="button" className="block lg:hidden" />
         </nav>

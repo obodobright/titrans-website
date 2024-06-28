@@ -43,7 +43,12 @@ export const PartnerSection = () => {
             className="flex mt-6 items-center flex-wrap justify-center gap-2"
           >
             {partners.map((data, index) => (
-              <img key={index} className="w-36 mx-4" src={`/asset/${data}`} alt="brand-partners" />
+              <img
+                key={index}
+                className="w-36 mx-4 scale-100 hover:scale-125 transition-all"
+                src={`/asset/${data}`}
+                alt="brand-partners"
+              />
             ))}
           </motion.div>
         </div>

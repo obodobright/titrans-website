@@ -5,7 +5,7 @@ import { TagBadge } from "@/components/Tag";
 
 export const ServiceHero = () => {
   return (
-    <HeroLayout bg="service-hero.png">
+    <HeroLayout bg="https://ik.imagekit.io/hydekcjmz/titrans/service-titrans.png?updatedAt=1719580312177">
       <CustomSectiomWrapper>
         <HeroMirror>
           <TagBadge cls="bg-[#FFCC4A] text-black">SERVICES</TagBadge>

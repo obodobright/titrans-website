@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { CustomSectiomWrapper } from "../customWrapper";
-import { FBIcon, IGICon, LinkedInICon, LocationIcon, XIcon } from "../icons";
+import { LocationIcon } from "../icons";
+import Link from "next/link";
+import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export const InfoHeaderNav = () => {
   return (
@@ -18,11 +20,38 @@ export const InfoHeaderNav = () => {
                 27 Paramount building, princess Street, Swindon, UK, SN1 2SD
               </p>
             </div>
+
             <div className="flex my-2 items-center justify-start lg:justify-center gap-5">
-              <IGICon />
-              <FBIcon />
-              <XIcon />
-              <LinkedInICon />
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/titranstech?igsh=aGc3MWxlNTh2OGg2"
+              >
+                <FaInstagram
+                  className="text-[#fff] hover:text-[#FFCC4A] transition-all scale-100 hover:scale-110"
+                  fontSize={25}
+                />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://web.facebook.com/p/Titrans-Technology-100067238292329"
+              >
+                <FaFacebook
+                  className="text-[#fff] hover:text-[#FFCC4A] transition-all scale-100 hover:scale-110"
+                  fontSize={25}
+                />
+              </Link>
+              <Link target="_blank" href="https://twitter.com/TitransTech">
+                <FaTwitter
+                  className="text-[#fff] hover:text-[#FFCC4A] transition-all scale-100 hover:scale-110"
+                  fontSize={25}
+                />
+              </Link>
+              <Link target="_blank" href="https://ng.linkedin.com/in/titrans-technology-165bab1a9">
+                <FaLinkedin
+                  className="text-[#fff] hover:text-[#FFCC4A] transition-all scale-100 hover:scale-110"
+                  fontSize={25}
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ export default function Services() {
       <ServiceHero />
       <ProcessSection />
       <ServiceSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <FAQSection />
     </CustomLayout>
   );
