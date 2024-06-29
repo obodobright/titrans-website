@@ -283,7 +283,40 @@ export const jobData = [
 ];
 
 export const testimonials = [
-  { name: "John D.", jobTitle: "Sudent", img: "/asset/testi1.png" },
-  { name: "Lumen Bright", jobTitle: "Founder of Adreia", img: "/asset/testi2.png" },
-  { name: "Fauz Malik", jobTitle: "Sales Manager of Wisconsin", img: "/asset/test3.png" },
+  {
+    name: "John D.",
+    testimony:
+      "Titrans Tech's mentorship program transformed my career. The personalized guidance and hands-on training equipped me with skills and confidence to excel in the tech industry.",
+    jobTitle: "Sudent",
+    img: "/asset/testi1.png",
+  },
+  {
+    testimony:
+      "As a startup, we needed expert consultancy to navigate digital transformation. Titrans Tech provided innovative solutions that streamlined our operations and boosted our growth.",
+    name: "Lumen Bright",
+    jobTitle: "Founder of Adreia",
+    img: "/asset/testi2.png",
+  },
+  {
+    testimony:
+      "Recruiting skilled tech talent was a challenge until we partnered with Titrans Tech. They connected us with professionals who have become invaluable members of our team.",
+    name: "Micheal L.",
+    jobTitle: "Sales Manager of Wisconsin",
+    img: "/asset/test3.png",
+  },
+  {
+    testimony:
+      "The software development services from Titrans Tech exceeded our expectations. The custom solution they built is robust, user-friendly, and perfectly tailored to our needs.",
+    name: "Samantha K",
+    jobTitle: "CEO at Ecommerce",
+    img: "/asset/test3.png",
+    img: "/asset/testimony4.avif",
+  },
+  {
+    testimony:
+      "Working with Titrans Tech has been a game-changer. Their cybersecurity solutions have fortified our defenses, giving us peace of mind in an increasingly digital world.",
+    name: "Alex R.",
+    jobTitle: "Client",
+    img: "/asset/testimony3.avif",
+  },
 ];

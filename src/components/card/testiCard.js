@@ -4,10 +4,10 @@ export const TestiCard = ({ isActive, data }) => {
     <section>
       <div
         className={`${
-          isActive ? "w-36 h-36" : "w-24 h-24"
-        } rounded-full mx-2 overflow-hidden flex items-center justify-center bg-slate-200`}
+          isActive ? "w-40 h-40 " : "w-24 h-24 hidden md:flex"
+        } rounded-full transition-all mx-2 overflow-hidden flex items-center justify-center bg-slate-200`}
       >
-        <img src={data.img} className="w-full" alt={data.name} />
+        <img src={data.img} className="w-full transition-all object-cover" alt={data.name} />
       </div>
     </section>
   );

@@ -2,14 +2,22 @@ import { TestiCard } from "@/components/card/testiCard";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { QoutesIcon } from "@/components/icons";
 import { testimonials } from "@/helper/data";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 export const TestimonySection = () => {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(3);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+    }, [5000]);
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
     <section className="w-full p-4 relative -top-[200px]">
@@ -27,11 +35,7 @@ export const TestimonySection = () => {
         >
           <QoutesIcon />
           <div className=" comment-box">
-            <p className="font-normal text-2xl">
-              Titrans Tech&apos;s mentorship program transformed my career. The personalized
-              guidance and hands-on training equipped me with skills and confidence to excel in the
-              tech industry.
-            </p>
+            <p className="font-normal text-2xl">{testimonials[current].testimony}</p>
           </div>
           <div className="flex items-center justify-center mt-6">
             {testimonials.map((data, index) => (
@@ -39,8 +43,8 @@ export const TestimonySection = () => {
             ))}
           </div>
           <div className="mt-3 text-center">
-            <h3 className="font-medium text-3xl text-[#030211]">John D.</h3>
-            <p className="text-lg font-normal text-[#030211]">Student</p>
+            <h3 className="font-medium text-3xl text-[#030211]">{testimonials[current].name}</h3>
+            <p className="text-lg font-normal text-[#030211]">{testimonials[current].jobTitle}</p>
           </div>
         </motion.div>
       </CustomSectiomWrapper>

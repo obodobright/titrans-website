@@ -6,7 +6,7 @@ import { TextH2 } from "./component/TextH2";
 import { useEffect, useState } from "react";
 
 export const HeroBanner = () => {
-  const [current, setCurrent] = useState(2);
+  const [current, setCurrent] = useState(0);
   const imgCarousel = [
     {
       title: "Empowering the Next Generation of Tech Leaders",
