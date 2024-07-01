@@ -45,7 +45,7 @@ export const PartnerSection = () => {
             {partners.map((data, index) => (
               <img
                 key={index}
-                className="w-36 mx-4 scale-100 hover:scale-125 transition-all"
+                className="w-36 animate-pulse mx-4 scale-100 hover:scale-125 transition-all"
                 src={`/asset/${data}`}
                 alt="brand-partners"
               />
