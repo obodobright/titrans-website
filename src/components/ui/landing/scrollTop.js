@@ -32,9 +32,9 @@ export const ScrollTop = () => {
         <div
           role="button"
           onClick={handleScrollToTop}
-          className="w-12 h-12 transition-all shadow flex right-3 items-center justify-center fixed bottom-10 group hover:bg-black rounded-full bg-[#E58F24]"
+          className="w-12 h-12 transition-all shadow group  flex right-3 items-center justify-center fixed bottom-10 group hover:bg-black rounded-full bg-[#E58F24]"
         >
-          <IoArrowUpOutline fontSize={20} className="text-white " />
+          <IoArrowUpOutline fontSize={20} className="text-white scale-100 group-hover:scale-110 " />
         </div>
       )}
     </>
