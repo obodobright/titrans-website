@@ -45,7 +45,7 @@ export const ValueSection = () => {
           }}
           transition={{ duration: 0.5, delay: 0.5 }}
           initial="hidden"
-          className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-"
+          className="mt-8 grid  grid-cols-[repeat(auto-fill,_minmax(200px,_1fr))] gap-"
         >
           {valueData.map((data, index) => (
             <ValueCard key={index} value={data} />

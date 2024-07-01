@@ -4,6 +4,7 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { BlogSection } from "@/components/ui/Blog/blogSection";
 import { TextH2 } from "@/components/ui/landing/component/TextH2";
 import { HeroLayout, HeroMirror } from "@/components/ui/landing/component/heroMirror";
+import { ScrollTop } from "@/components/ui/landing/scrollTop";
 
 export default function Blogs() {
   return (
@@ -17,6 +18,7 @@ export default function Blogs() {
         </CustomSectiomWrapper>
       </HeroLayout>
       <BlogSection />
+      <ScrollTop />
     </CustomLayout>
   );
 }

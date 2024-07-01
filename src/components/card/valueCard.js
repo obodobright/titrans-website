@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export const ValueCard = ({ value }) => {
   return (
-    <div className="m-2 h-fit rounded-md bg-white hover:bg-black hover:shadow scale-100 hover:scale-[1.03] transition-all group py-6 px-4 ">
+    <div className="m-2 h-fit rounded-md bg-white hover:bg-black hover:shadow scale-100 hover:scale-[1.03] transition-all group py-6 pb-3 px-4 ">
       <div className="scale-100 group-hover:scale-110 transition-all">{value.icon}</div>
       <div>
         <h3 className="font-semibold group-hover:text-white mt-2 transition-all text-lg text-[#181818]">
           {value.name}
         </h3>
-        <p className="text-base font-normal group-hover:text-white transition-all  my-2 text-[#595566]">
+        <p className="text-sm font-normal group-hover:text-white transition-all  my-2 text-[#595566]">
           {value.description}
         </p>
         {/* <Link href="/">

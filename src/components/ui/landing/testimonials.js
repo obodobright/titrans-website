@@ -14,7 +14,7 @@ export const TestimonySection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
-    }, [5000]);
+    }, [8000]);
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
@@ -42,10 +42,10 @@ export const TestimonySection = () => {
               <TestiCard data={data} isActive={index === current} key={index} />
             ))}
           </div>
-          <div className="mt-3 text-center">
+          {/* <div className="mt-3 text-center">
             <h3 className="font-medium text-3xl text-[#030211]">{testimonials[current].name}</h3>
             <p className="text-lg font-normal text-[#030211]">{testimonials[current].jobTitle}</p>
-          </div>
+          </div> */}
         </motion.div>
       </CustomSectiomWrapper>
     </section>

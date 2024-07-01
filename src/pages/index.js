@@ -7,6 +7,7 @@ import { JobSection } from "@/components/ui/landing/jobsSection";
 import { TestimonySection } from "@/components/ui/landing/testimonials";
 import { Call2Action } from "@/components/ui/landing/Call2action";
 import { PartnerSection } from "@/components/ui/landing/partners";
+import { ScrollTop } from "@/components/ui/landing/scrollTop";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <TestimonySection />
       <Call2Action />
       <PartnerSection />
+      <ScrollTop />
     </CustomLayout>
   );
 }

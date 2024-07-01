@@ -93,6 +93,7 @@ pre {
   transform: translateX(-50%);
   border-width: 20px 20px 0;
   border-style: solid;
+  border: 0;
   border-color: transparent;
-  border-top-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+  border-top-color: rgba(0, 0, 0, 0.3);
 }

@@ -11,22 +11,19 @@ export const HeroBanner = () => {
     {
       title: "Empowering the Next Generation of Tech Leaders",
       description: "Transform your Potential with Expert training and Mentorship",
-      img: "https://ik.imagekit.io/hydekcjmz/titrans/hero-about.png?updatedAt=1719585102534",
+      img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper3.png?updatedAt=1719780049710",
     },
     {
       title: "Innovate, Create, Succeed.",
       description: "Join Our Global Cummunity of Visionary Minds",
-      img: "https://ik.imagekit.io/hydekcjmz/titrans/about-titrans.png?updatedAt=1719580318952",
+      img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper1.png?updatedAt=1719779993573",
     },
     {
       title: "Building the Future, One Solution at a Time",
       description: "Your Journey to Excellence Starts Here.",
-      img: " https://ik.imagekit.io/hydekcjmz/titrans/contact-hero.png?updatedAt=1719585125760",
+      img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper2.png?updatedAt=1719780029849",
     },
   ];
-  // https://ik.imagekit.io/hydekcjmz/titrans/hero-about.png?updatedAt=1719585102534
-  // https://ik.imagekit.io/hydekcjmz/titrans/about-titrans.png?updatedAt=1719580318952
-  // https://ik.imagekit.io/hydekcjmz/titrans/contact-hero.png?updatedAt=1719585125760
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,14 +32,23 @@ export const HeroBanner = () => {
 
     return () => clearInterval(interval);
   }, [imgCarousel.length]);
+
+  const prevImg = () => {
+    setCurrent((prevIndex) => (prevIndex === imgCarousel.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
     <HeroLayout bg={imgCarousel[current].img}>
       <div
         style={{ boxShadow: "0px 24px 42px 0px #B9B9B940" }}
         className="w-[130px] hidden  cursor-pointer absolute left-7  top-32 lg:flex items-center justify-center h-[130px] bg-transparent rounded-full "
       >
-        <div className="w-12 flex items-center justify-center h-12 bg-white rounded-full">
-          <FaArrowLeftLong />
+        <div
+          role="button"
+          onClick={prevImg}
+          className="w-12 flex group  items-center justify-center h-12 bg-white hover:bg-[#E58F24] transition-all  rounded-full"
+        >
+          <FaArrowLeftLong className="text-black group-hover:text-white" />
         </div>
       </div>
 
@@ -50,8 +56,12 @@ export const HeroBanner = () => {
         style={{ boxShadow: "0px 24px 42px 0px #B9B9B940" }}
         className="w-[130px] hidden  cursor-pointer absolute right-7 top-32 lg:flex items-center justify-center h-[130px] bg-transparent rounded-full "
       >
-        <div className="w-12 flex items-center justify-center h-12 bg-[#E58F24] rounded-full">
-          <FaArrowRightLong color="white" />
+        <div
+          role="button"
+          onClick={prevImg}
+          className="w-12  flex items-center justify-center h-12 group  bg-white hover:bg-[#E58F24] transition-all rounded-full"
+        >
+          <FaArrowRightLong className="text-black group-hover:text-white" />
         </div>
       </div>
       <CustomSectiomWrapper>

@@ -4,6 +4,7 @@ import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { TextH2 } from "@/components/ui/landing/component/TextH2";
 import { HeroLayout, HeroMirror } from "@/components/ui/landing/component/heroMirror";
 import { JobSection } from "@/components/ui/landing/jobsSection";
+import { ScrollTop } from "@/components/ui/landing/scrollTop";
 
 export default function Jobs() {
   return (
@@ -17,6 +18,7 @@ export default function Jobs() {
         </CustomSectiomWrapper>
       </HeroLayout>
       <JobSection />
+      <ScrollTop />
     </CustomLayout>
   );
 }

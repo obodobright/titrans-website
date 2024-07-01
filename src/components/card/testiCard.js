@@ -9,6 +9,14 @@ export const TestiCard = ({ isActive, data }) => {
       >
         <img src={data.img} className="w-full transition-all object-cover" alt={data.name} />
       </div>
+      {isActive ? (
+        <div className="mt-3 text-center">
+          <h3 className="font-medium text-3xl text-[#030211]">{data.name}</h3>
+          <p className="text-lg font-normal text-[#030211]">{data.jobTitle}</p>
+        </div>
+      ) : (
+        ""
+      )}
     </section>
   );
 };

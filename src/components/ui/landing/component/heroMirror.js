@@ -33,7 +33,7 @@ export const HeroLayout = ({ bg, children }) => {
       style={{
         backgroundImage: `url(${bg})`,
       }}
-      className="w-full transition-all fle items-center relative bg-[whitesmoke]  bg-no-repeat bg-cover bg-center  bg-red-30 py-6 px-3 md:py-12 md:px-12 "
+      className="w-full  fle items-center relative bg-[whitesmoke]  bg-no-repeat bg-cover bg-center  bg-red-30 py-6 px-3 md:py-12 md:px-12 "
     >
       {children}
     </section>

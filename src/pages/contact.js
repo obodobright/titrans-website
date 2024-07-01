@@ -6,6 +6,7 @@ import { ContactSection } from "@/components/ui/contact/contacts";
 import { SubScribeSection } from "@/components/ui/contact/subscribeSection";
 import { TextH2 } from "@/components/ui/landing/component/TextH2";
 import { HeroLayout, HeroMirror } from "@/components/ui/landing/component/heroMirror";
+import { ScrollTop } from "@/components/ui/landing/scrollTop";
 
 export default function Contact() {
   return (
@@ -21,6 +22,7 @@ export default function Contact() {
       <ContactSection />
       <SubScribeSection />
       <ContactSectionProcess />
+      <ScrollTop />
     </CustomLayout>
   );
 }

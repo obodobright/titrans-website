@@ -1,4 +1,5 @@
 import { CustomLayout } from "@/components/CustomLayout";
+import { ScrollTop } from "@/components/ui/landing/scrollTop";
 import { ServiceSection } from "@/components/ui/landing/services";
 import { FAQSection } from "@/components/ui/services/Faq";
 import { PricingSection } from "@/components/ui/services/PricingSection";
@@ -13,6 +14,7 @@ export default function Services() {
       <ServiceSection />
       {/* <PricingSection /> */}
       <FAQSection />
+      <ScrollTop />
     </CustomLayout>
   );
 }

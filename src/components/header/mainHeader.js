@@ -1,6 +1,6 @@
 import { navData } from "@/helper/data";
 import { CustomSectiomWrapper } from "../customWrapper";
-import { BrandLogo, PhoneIcon } from "../icons";
+import { BrandLogo } from "../icons";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaBars } from "react-icons/fa6";
@@ -16,7 +16,9 @@ export const MainNavHeader = () => {
     <nav className="w-full bg-white">
       <CustomSectiomWrapper>
         <nav className="hidden lg:flex px-3 h-14 md:h-24 items-center justify-between">
-          <BrandLogo />
+          <Link href="/">
+            <BrandLogo />
+          </Link>
           <>
             <ul className="hidden lg:flex gap-3 items-center justify-center">
               {navData.map((nav, index) => (
