@@ -14,15 +14,17 @@ export const HeroBanner = () => {
       img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper3.png?updatedAt=1719780049710",
     },
     {
-      title: "Innovate, Create, Succeed.",
+      title: "We Innovate, We Create, We Succeed.",
       description: "Join Our Global Cummunity of Visionary Minds",
-      img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper1.png?updatedAt=1719779993573",
+      img: " https://ik.imagekit.io/hydekcjmz/titrans/swiper1.png?updatedAt=1719779993573",
     },
     {
       title: "Building the Future, One Solution at a Time",
       description: "Your Journey to Excellence Starts Here.",
       img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper2.png?updatedAt=1719780029849",
     },
+
+    //
   ];
 
   useEffect(() => {
@@ -38,7 +40,7 @@ export const HeroBanner = () => {
   };
 
   return (
-    <HeroLayout bg={imgCarousel[current].img}>
+    <HeroLayout bg={imgCarousel[current]?.img}>
       <div
         style={{ boxShadow: "0px 24px 42px 0px #B9B9B940" }}
         className="w-[130px] hidden  cursor-pointer absolute left-7  top-32 lg:flex items-center justify-center h-[130px] bg-transparent rounded-full "
