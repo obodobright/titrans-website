@@ -23,8 +23,6 @@ export const HeroBanner = () => {
       description: "Your Journey to Excellence Starts Here.",
       img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper2.png?updatedAt=1719780029849",
     },
-
-    //
   ];
 
   useEffect(() => {
