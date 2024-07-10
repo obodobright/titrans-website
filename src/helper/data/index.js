@@ -300,7 +300,7 @@ export const testimonials = [
   {
     testimony:
       "Recruiting skilled tech talent was a challenge until we partnered with Titrans Tech. They connected us with professionals who have become invaluable members of our team.",
-    name: "Micheal L.",
+    name: "Rose L.",
     jobTitle: "Sales Manager of Wisconsin",
     img: "/asset/test3.png",
   },
