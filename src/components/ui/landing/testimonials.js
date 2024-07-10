@@ -5,6 +5,7 @@ import { testimonials } from "@/helper/data";
 import { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 export const TestimonySection = () => {
   const [current, setCurrent] = useState(3);
@@ -18,6 +19,10 @@ export const TestimonySection = () => {
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
+
+  const handleClick = () => {
+    setCurrent((prevIndex) => (prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1));
+  };
 
   return (
     <section className="w-full p-4 relative -top-[200px]">
@@ -35,17 +40,29 @@ export const TestimonySection = () => {
         >
           <QoutesIcon />
           <div className=" comment-box">
-            <p className="font-normal text-2xl">{testimonials[current].testimony}</p>
+            <p className="font-normal text-lg">{testimonials[current].testimony}</p>
           </div>
-          <div className="flex items-center justify-center mt-6">
-            {testimonials.map((data, index) => (
-              <TestiCard data={data} isActive={index === current} key={index} />
-            ))}
-          </div>
-          {/* <div className="mt-3 text-center">
-            <h3 className="font-medium text-3xl text-[#030211]">{testimonials[current].name}</h3>
-            <p className="text-lg font-normal text-[#030211]">{testimonials[current].jobTitle}</p>
-          </div> */}
+          <section className="flex items-center justify-between w-full">
+            <div
+              role="button"
+              onClick={handleClick}
+              className="w-12 flex group shadow items-center justify-center h-12 bg-white hover:bg-[#E58F24] transition-all  rounded-full"
+            >
+              <FaArrowLeftLong className="text-black group-hover:text-white" />
+            </div>
+            <div className="flex items-center justify-center mt-6">
+              {testimonials.map((data, index) => (
+                <TestiCard data={data} isActive={index === current} key={index} />
+              ))}
+            </div>
+            <div
+              role="button"
+              onClick={handleClick}
+              className="w-12 shadow  flex items-center justify-center h-12 group  bg-white hover:bg-[#E58F24] transition-all rounded-full"
+            >
+              <FaArrowRightLong className="text-black group-hover:text-white" />
+            </div>
+          </section>
         </motion.div>
       </CustomSectiomWrapper>
     </section>

@@ -14,7 +14,11 @@ export const HeroBanner = () => {
       img: "https://ik.imagekit.io/hydekcjmz/titrans/swiper3.png?updatedAt=1719780049710",
     },
     {
-      title: "We Innovate, We Create, We Succeed.",
+      title: (
+        <>
+          We Innovate, <br /> We Create, <br /> We Succeed.
+        </>
+      ),
       description: "Join Our Global Cummunity of Visionary Minds",
       img: " https://ik.imagekit.io/hydekcjmz/titrans/swiper1.png?updatedAt=1719779993573",
     },
