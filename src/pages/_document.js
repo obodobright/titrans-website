@@ -32,9 +32,9 @@ export default function Document() {
         <meta property="og:url" content="https://titrans-website.vercel.app/" />
         <meta
           property="og:title"
-          content=" Technology Training and IT Conssultancy - Titrans Technology"
+          content=" Technology Training and IT Consultancy - Titrans Technology"
         />
-        <meta property="og:description" content="  Technology Training and IT Conssultancy" />
+        <meta property="og:description" content="  Technology Training and IT Consultancy" />
         <meta property="og:image" content="https://titrans-website.vercel.app/titrans-logo.png" />
         <link rel="canonical" href="https://titrans-website.vercel.app/"></link>
         <meta property="twitter:card" content="summary_large_image" />
