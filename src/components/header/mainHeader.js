@@ -43,12 +43,14 @@ export const MainNavHeader = () => {
               ))}
             </ul>
           </>
-          <div className="bg-[#EBEBEB] hover:cursor-pointer transition-all hover:bg-[#E58F24] group hidden lg:flex items-center justify-start rounded-[42px] gap-2 pl-2 pr-6 h-14">
-            <div className="flex items-center w-10 h-10 justify-center p-2 rounded-full bg-[#E58F24] group-hover:bg-black">
-              <FiPhone className="group-hover:text-white" fontSize={20} />
+          <Link href="tel:+44 7835 554 987">
+            <div className="bg-[#EBEBEB] hover:cursor-pointer transition-all hover:bg-[#E58F24] group hidden lg:flex items-center justify-start rounded-[42px] gap-2 pl-2 pr-6 h-14">
+              <div className="flex items-center w-10 h-10 justify-center p-2 rounded-full bg-[#E58F24] group-hover:bg-black">
+                <FiPhone className="group-hover:text-white" fontSize={20} />
+              </div>
+              <p className="group-hover:text-white">+44 7835 554 987</p>
             </div>
-            <p className="group-hover:text-white">+44 7761 425 493</p>
-          </div>
+          </Link>
           <FaBars fontSize={20} role="button" className="block lg:hidden" />
         </nav>
         <MobileHeader />

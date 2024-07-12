@@ -155,6 +155,13 @@ export const processData = [
   },
 ];
 
+export const courses = [
+  { label: "Web Development", value: "Web Development" },
+  { label: "Data Analytics", value: "Data Analytics" },
+  { label: "UI/UX Design", value: "UI/UX Design" },
+  { label: "Product Management", value: "Product Management" },
+];
+
 export const coursesData = [
   {
     name: "Web Development",

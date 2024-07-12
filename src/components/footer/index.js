@@ -19,7 +19,7 @@ export const Footer = () => {
           <div className="flex flex-col gap-1 text-center items-center justify-center">
             <h3 className="text-xl font-bold leading-6">Get in touch</h3>
             <h2 className="text-2xl md:text-3xl text-[#7C7C7C] font-bold leading-8">
-              +44 7761 425 493 | info@titranstech.co.uk
+              +44 7835 554 987 | info@titranstech.co.uk
             </h2>
           </div>
           {/* <div className="w-full h-[1px] bg-[#E0E0E0]"></div> */}

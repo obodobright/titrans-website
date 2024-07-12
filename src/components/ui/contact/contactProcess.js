@@ -5,6 +5,7 @@ import { FiPhone } from "react-icons/fi";
 import { CiClock2, CiLocationOn } from "react-icons/ci";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Select from "react-select";
 
 export const ContactSectionProcess = () => {
   const ref = useRef(null);
@@ -140,6 +141,48 @@ export const ContactTextField = ({ label, placeholder }) => {
         className="h-28 hover:border-[#E58F24] transition-all w-full outline-none border rounded-[22px] py-2 px-3"
         id=""
       ></textarea>
+    </section>
+  );
+};
+
+export const SelectField = ({ value, label, required, option, placeholder, handleChange }) => {
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      border: "1px solid whitesmoke",
+      borderRadius: "10px",
+      background: "#fff",
+      height: "30px",
+      color: "#fff",
+    }),
+
+    option: (provided, state) => ({
+      ...provided,
+      display: "flex",
+      alignItems: "center",
+      padding: "5px",
+      backgroundColor: state.isSelected ? "whitesmoke" : state.isFocused ? "#F6F8FA" : "white",
+      color: state.isSelected ? "black" : state.isFocused ? "black" : "black",
+    }),
+  };
+
+  return (
+    <section className="my-3">
+      <label htmlFor="">
+        <p className="my-1 text-base font-medium leading-5 text-[#0A0D14] dark:text-white ">
+          {label}
+        </p>
+      </label>
+      <Select
+        value={value}
+        required={required}
+        className="text-white"
+        onChange={handleChange}
+        options={option}
+        // formatOptionLabel={formatOptionLabel}
+        styles={customStyles}
+        placeholder={placeholder}
+      />
     </section>
   );
 };

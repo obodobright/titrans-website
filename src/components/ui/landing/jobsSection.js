@@ -3,6 +3,7 @@ import { JobCard } from "@/components/card/jobCard";
 import { CustomSectiomWrapper } from "@/components/customWrapper";
 import { jobData } from "@/helper/data";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 export const JobSection = () => {
@@ -34,7 +35,7 @@ export const JobSection = () => {
               </h3>
             </div>
             <button className="h-12 px-6 text-center rounded-[42px] bg-[#E58F24] text-white">
-              View More
+              <Link href="/jobs"> View More</Link>
             </button>
           </motion.div>
           <motion.div
