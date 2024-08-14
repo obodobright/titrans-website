@@ -6,10 +6,12 @@ import { TextH2 } from "./component/TextH2";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FormModal } from "@/components/modal/formModal";
+import { SuccessModal } from "@/components/modal/successModal";
 
 export const HeroBanner = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [current, setCurrent] = useState(0);
+  const [success, setSuccess] = useState(false);
   const imgCarousel = [
     {
       title: "Empowering the Next Generation of Tech Leaders",
@@ -97,7 +99,23 @@ export const HeroBanner = () => {
           </HeroMirror>
         </CustomSectiomWrapper>
       </HeroLayout>
-      {isOpen && <FormModal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+      {success && (
+        <SuccessModal
+          isOpen={success}
+          onClose={() => setSuccess(false)}
+          message="Meeting Enquires initialized, we will contact you soon."
+        />
+      )}
+      {isOpen && (
+        <FormModal
+          openSuccessModal={() => {
+            setIsOpen(false);
+            setSuccess(true);
+          }}
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+        />
+      )}
     </>
   );
 };
