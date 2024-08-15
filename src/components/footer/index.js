@@ -11,7 +11,8 @@ export const Footer = () => {
   const [success, setSuccess] = useState(false);
   const [email, setEmail] = useState("");
 
-  const subcribeNewsletter = async () => {
+  const subcribeNewsletter = async (e) => {
+    e.preventDefault();
     const body = {
       email: email,
     };
@@ -84,21 +85,19 @@ export const Footer = () => {
                 </ul>
                 <ul>
                   <LiTitle>Newsletter</LiTitle>
-                  <div className="flex items-center gap-2">
+                  <form onSubmit={subcribeNewsletter} className="flex items-center gap-2">
                     <input
+                      required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       type="text"
                       className="h-12  hover:placeholder:text-black hover:border-[#E58F24] transition-all  rounded-[40px] outline-none bg-white border px-2 border-[#D3D3D3]"
                       placeholder="enter your mail... "
                     />
-                    <button
-                      onClick={subcribeNewsletter}
-                      className="h-12 text-white hover:bg-[#E58F24] transition-all px-4 rounded-[40px] text-center bg-black"
-                    >
+                    <button className="h-12 text-white hover:bg-[#E58F24] transition-all px-4 rounded-[40px] text-center bg-black">
                       {loading ? "loading..." : "Submit"}
                     </button>
-                  </div>
+                  </form>
                   <div className="flex pl-2 pt-5 items-center justify-start gap-2">
                     <Link
                       target="_blank"
